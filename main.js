@@ -6,6 +6,8 @@ const compose = require('./src/functions/compose')
 const loopback = require('./src/functions/loopback')
 const paginate = require('./src/functions/paginate')
 
+const offset = require('./src/arrays/offset')
+
 const { freeze } = Object
 
 /**
@@ -29,6 +31,9 @@ const FDX = freeze({
     loopback,
     paginate,
     pipeline,
+  }),
+  Array: freeze({
+    offset
   })
 })
 
