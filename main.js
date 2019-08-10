@@ -3,6 +3,8 @@ const dive = require('./src/objects/dive')
 
 const pipeline = require('./src/functions/pipeline')
 const compose = require('./src/functions/compose')
+const loopback = require('./src/functions/loopback')
+const paginate = require('./src/functions/paginate')
 
 const { freeze } = Object
 
@@ -23,8 +25,10 @@ const FDX = freeze({
     dive,
   }),
   Func: freeze({
+    compose,
+    loopback,
+    paginate,
     pipeline,
-    compose
   })
 })
 
