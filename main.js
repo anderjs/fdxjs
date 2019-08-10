@@ -8,6 +8,8 @@ const paginate = require('./src/functions/paginate')
 
 const offset = require('./src/arrays/offset')
 
+const decimal = require('./src/number/decimal')
+
 const { freeze } = Object
 
 /**
@@ -22,18 +24,24 @@ const { freeze } = Object
  * @author anderjs
  */
 const FDX = freeze({
-  Object: freeze({
-    clone,
-    dive,
+  Array: freeze({
+    offset
   }),
+
   Func: freeze({
     compose,
     loopback,
     paginate,
     pipeline,
   }),
-  Array: freeze({
-    offset
+
+  Object: freeze({
+    clone,
+    dive,
+  }),
+
+  Number: freeze({
+    decimal
   })
 })
 
