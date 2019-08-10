@@ -1,6 +1,9 @@
 const clone = require('./src/objects/clone')
 const dive = require('./src/objects/dive')
 
+const pipeline = require('./src/functions/pipeline')
+const compose = require('./src/functions/compose')
+
 const { freeze } = Object
 
 /**
@@ -11,7 +14,6 @@ const { freeze } = Object
  * What provides referential transparency, and easy implementation. 
  * It also gives you a KIT for your web applications in terms of page development tools,
  * and queryStrings.
- * @type {{ Object: { clone: function, dive: function }}} FDX
  * @see https://github.com/anderjs/FDXJS
  * @author anderjs
  */
@@ -19,8 +21,11 @@ const FDX = freeze({
   Object: freeze({
     clone,
     dive,
+  }),
+  Func: freeze({
+    pipeline,
+    compose
   })
 })
-
 
 module.exports = FDX
