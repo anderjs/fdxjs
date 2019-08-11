@@ -6,6 +6,7 @@ const compose = require('./src/functions/compose')
 const loopback = require('./src/functions/loopback')
 const paginate = require('./src/functions/paginate')
 const typeofAll = require('./src/functions/typeofall')
+const range = require('./src/functions/range')
 
 const offset = require('./src/arrays/offset')
 
@@ -34,7 +35,8 @@ const FDX = freeze({
     loopback,
     paginate,
     pipeline,
-    typeofAll
+    typeofAll,
+    range
   }),
 
   object: freeze({
