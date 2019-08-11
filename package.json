@@ -1,17 +1,21 @@
 {
-  "name": "fdx.js",
+  "name": "fdx",
   "version": "1.0.0",
   "description": "FDX.js is a library based on functional programming, which allows you to use pure functions to operate on different data structures, and primitive types. The objective is to achieve a rich amount of useful functions for the development of a web app that is maintainable.",
-  "main": "main.js",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest"
   },
   "keywords": [
-    "Functional Programming", "Library", "Front End"
+    "Functional Programming",
+    "Library",
+    "Front End"
   ],
   "author": "anderjs",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^12.7.1",
     "jest": "^24.8.0"
   }
 }
