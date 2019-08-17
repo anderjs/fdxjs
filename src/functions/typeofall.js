@@ -11,7 +11,7 @@
  * @example
  * typeofAll('number', 1, 2, 3, 4, 5) => true
  */
-function typeofAll(type, inverseMode, ...args) {
+function typeofAll(type, inverseMode = false, ...args) {
   return inverseMode ? args.every(arg => typeof arg !== type) : args.every(arg => typeof arg === type)
 }
 
