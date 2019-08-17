@@ -5,6 +5,8 @@ const pipeline = require('./src/functions/pipeline')
 const compose = require('./src/functions/compose')
 const loopback = require('./src/functions/loopback')
 const paginate = require('./src/functions/paginate')
+const typeofAll = require('./src/functions/typeofall')
+const range = require('./src/functions/range')
 
 const offset = require('./src/arrays/offset')
 
@@ -24,23 +26,25 @@ const { freeze } = Object
  * @author anderjs
  */
 const FDX = freeze({
-  Array: freeze({
+  array: freeze({
     offset
   }),
 
-  Func: freeze({
+  fn: freeze({
     compose,
     loopback,
     paginate,
     pipeline,
+    typeofAll,
+    range
   }),
 
-  Object: freeze({
+  object: freeze({
     clone,
     dive,
   }),
 
-  Number: freeze({
+  num: freeze({
     decimal
   })
 })

@@ -1,3 +1,4 @@
+const typeofAll = require('../functions/typeofall')
 const { max, min } = Math;
 
 /**
@@ -15,6 +16,14 @@ const { max, min } = Math;
  * output: [3, 4, 5, 6, 7]
  */
 function offset(arr, currentPosition, fromLeft, fromRight) {
+  if (typeof arr !== 'object') {
+    return []
+  }
+  
+  const inverseMode = true
+  if(typeofAll('number', inverseMode, currentPosition, fromLeft, fromRight)) {
+    return []
+  }
 
   if (arr.some(value => typeof value !== 'number')) {
     throw new Error(`${value} must be a number`)
@@ -23,8 +32,8 @@ function offset(arr, currentPosition, fromLeft, fromRight) {
   const size = arr.length
   return arr.filter(value => {
     return (
-      value >= max(1, currentPosition - fromLeft) &&
-      value <= min(size, currentPosition + fromRight)
+      value >= max(arr[0], arr[currentPosition] - fromLeft) &&
+      value <= min(size, arr[currentPosition] + fromRight)
     )
   })
 }
