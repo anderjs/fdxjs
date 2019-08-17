@@ -9,6 +9,7 @@ const typeofAll = require('./src/functions/typeofall')
 const range = require('./src/functions/range')
 
 const offset = require('./src/arrays/offset')
+const union = require('./src/arrays/union')
 
 const decimal = require('./src/number/decimal')
 
@@ -27,7 +28,8 @@ const { freeze } = Object
  */
 const FDX = freeze({
   array: freeze({
-    offset
+    offset,
+    union
   }),
 
   fn: freeze({

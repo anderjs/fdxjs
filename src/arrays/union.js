@@ -5,13 +5,15 @@
  * @param {any []} arr 
  * @example
  * FDX.array.union([1, 2]) => [[1, 1], [1, 2], [2, 1], [2, 2]]
+ * @returns {any []}
  */
 function union(arr) {
 
   const size = arr ? arr.length : 0
+
   const values = []
 
-  const unique = Array.from(new Set(size > 0 ? arr : []))
+  const unique = Array.from(new Set(size > 0 ? [...arr] : []))
 
   unique.forEach((value, _, arr) => {
     arr.forEach((_, nestedIndex) => {
