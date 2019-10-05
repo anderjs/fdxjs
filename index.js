@@ -7,6 +7,7 @@ const loopback = require('./src/functions/loopback')
 const paginate = require('./src/functions/paginate')
 const typeofAll = require('./src/functions/typeofall')
 const range = require('./src/functions/range')
+const random = require('./src/functions/random')
 const toBoolean = require('./src/functions/toBoolean')
 const evalString = require('./src/functions/evalString')
 
@@ -31,7 +32,7 @@ const { freeze } = Object
 const FDX = freeze({
   array: freeze({
     offset,
-    union
+    union,
   }),
 
   fn: freeze({
@@ -41,6 +42,7 @@ const FDX = freeze({
     pipeline,
     typeofAll,
     range,
+    random,
     evalString,
     toBoolean,
   }),
