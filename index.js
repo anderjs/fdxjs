@@ -9,6 +9,7 @@ const typeofAll = require('./src/functions/typeofall')
 const range = require('./src/functions/range')
 const toBoolean = require('./src/functions/toBoolean')
 const evalString = require('./src/functions/evalString')
+const isObject = require('./src/functions/isObject')
 
 const offset = require('./src/arrays/offset')
 const union = require('./src/arrays/union')
@@ -31,7 +32,7 @@ const { freeze } = Object
 const FDX = freeze({
   array: freeze({
     offset,
-    union
+    union,
   }),
 
   fn: freeze({
@@ -43,6 +44,7 @@ const FDX = freeze({
     range,
     evalString,
     toBoolean,
+    isObject,
   }),
 
   object: freeze({
