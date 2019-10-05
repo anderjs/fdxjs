@@ -8,6 +8,7 @@ const paginate = require('./src/functions/paginate')
 const typeofAll = require('./src/functions/typeofall')
 const range = require('./src/functions/range')
 const toBoolean = require('./src/functions/toBoolean')
+const times = require('./src/functions/times')
 const evalString = require('./src/functions/evalString')
 
 const offset = require('./src/arrays/offset')
@@ -31,7 +32,7 @@ const { freeze } = Object
 const FDX = freeze({
   array: freeze({
     offset,
-    union
+    union,
   }),
 
   fn: freeze({
@@ -42,6 +43,7 @@ const FDX = freeze({
     typeofAll,
     range,
     evalString,
+    times,
     toBoolean,
   }),
 
